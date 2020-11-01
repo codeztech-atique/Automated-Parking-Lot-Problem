@@ -24,6 +24,6 @@ required application should be mentioned) <br />
 • • Quality of code. 
 
 
-**Steps to Run the Application**
-npm install --save
+**Steps to Run the Application** <br />
+npm install --save <br />
 node local.js
