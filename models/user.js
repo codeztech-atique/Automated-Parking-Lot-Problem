@@ -3,12 +3,6 @@ const mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var userschema = new mongoose.Schema({
-  cloudid: {
-    type: String
-  },
-  companyname: {
-    type: String
-  },
   user: {
     type: String
   },
@@ -19,9 +13,6 @@ var userschema = new mongoose.Schema({
     type: String
   },
   lastname: {
-    type: String
-  },
-  token: {
     type: String
   }
 });

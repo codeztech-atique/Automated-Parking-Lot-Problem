@@ -26,4 +26,11 @@ required application should be mentioned) <br />
 
 **Steps to Run the Application** <br />
 npm install --save <br />
-node local.js
+node local.js || node local
+
+**TechStack I used** <br />
+NodeJS <br />
+MongoDB Cloud
+
+**API URL** <br />
+https://q7gvjv5v96.execute-api.ap-south-1.amazonaws.com/production
