@@ -30,9 +30,9 @@ node local.js || node local
 
 **TechStack I used** <br />
 NodeJS <br />
-MongoDB Cloud
-AWS Lambda
-AWS API Getway
+MongoDB Cloud <br />
+AWS Lambda <br />
+AWS API Getway <br />
 
 **API URL** <br />
 https://q7gvjv5v96.execute-api.ap-south-1.amazonaws.com/production
