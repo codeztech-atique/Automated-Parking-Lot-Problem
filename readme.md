@@ -9,17 +9,17 @@ Design the architecture with your own understanding.
 Guidelines:
 
 • You can choose your desired framework and language. (A clear documentation on how to run the
-required application should be mentioned)
-• You can use any database you are comfortable with. (NOSQL is preferred)
-• UI is not required.
+required application should be mentioned) <br />
+• You can use any database you are comfortable with. (NOSQL is preferred) <br />
+• UI is not required. <br />
 
-Evaluation:
-• • Database design/ Data Structure.
-• • API structure with appropriate standards.
-• • Business Logic.
-• • The scope provided for further added features.
-• • API and code version support.
-• • Logging and Documentation.
+Evaluation: <br />
+• • Database design/ Data Structure. <br />
+• • API structure with appropriate standards. <br />
+• • Business Logic. <br />
+• • The scope provided for further added features. <br />
+• • API and code version support. <br />
+• • Logging and Documentation. <br />
 • • Quality of code. 
 
 
