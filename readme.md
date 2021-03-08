@@ -35,4 +35,4 @@ AWS Lambda <br />
 AWS API Getway <br />
 
 **API URL** <br />
-https://q7gvjv5v96.execute-api.ap-south-1.amazonaws.com/production
+https://3sgspkd105.execute-api.ap-south-1.amazonaws.com/production

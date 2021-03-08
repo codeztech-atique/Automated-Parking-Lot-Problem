@@ -24,18 +24,18 @@ app.get('/', (req, res) => {
   });
 });
 
-// Get all the details from JioParkingSlot Table 
-app.post('/web/jio/totalparkingslot', [middleware.validateAPI], (req, res, next) => {
+// Get all the details from ParkingSlot Table 
+app.post('/totalparkingslot', [middleware.validateAPI], (req, res, next) => {
   controllers.getAllInformation(req, res);
 });
 
-// Update totalParkingSlot in JioParkingSlot Table 
-app.post('/web/jio/totalparkingslot/update', [middleware.updateTotalParkingSlotValidateApI], (req, res, next) => {
+// Update totalParkingSlot in ParkingSlot Table 
+app.put('/totalparkingslot/update', [middleware.updateTotalParkingSlotValidateApI], (req, res, next) => {
   controllers.updateTotalParkingSlot(req, res);
 });
 
 // Calculated and Automated Reserved and NonReserved based on first come first serve basis
-app.post('/web/jio/totalparkingslot/calculate', [middleware.validateCalculation], (req, res, next) => {
+app.post('/totalparkingslot/calculate', [middleware.validateCalculation], (req, res, next) => {
   controllers.parkingLotPrblm(req, res);
 });
 

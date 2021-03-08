@@ -19,7 +19,7 @@
     "ApiLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/JioTesseractParkingLotProblem-production-api"
+        "LogGroupName": "/aws/lambda/NasAcademyParkingProblem-production-api"
       }
     },
     "IamRoleLambdaExecution": {
@@ -48,7 +48,7 @@
                 "-",
                 [
                   "production",
-                  "JioTesseractParkingLotProblem",
+                  "NasAcademyParkingProblem",
                   "lambda"
                 ]
               ]
@@ -63,7 +63,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/JioTesseractParkingLotProblem-production-api:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/NasAcademyParkingProblem-production-api:*"
                     }
                   ]
                 },
@@ -74,7 +74,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/JioTesseractParkingLotProblem-production-api:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/NasAcademyParkingProblem-production-api:*:*"
                     }
                   ]
                 }
@@ -87,7 +87,7 @@
           "Fn::Join": [
             "-",
             [
-              "JioTesseractParkingLotProblem",
+              "NasAcademyParkingProblem",
               "production",
               "ap-south-1",
               "lambdaRole"
@@ -103,9 +103,9 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/JioTesseractParkingLotProblem/production/1604234687044-2020-11-01T12:44:47.044Z/JioTesseractParkingLotProblem.zip"
+          "S3Key": "serverless/NasAcademyParkingProblem/production/1615054404017-2021-03-06T18:13:24.017Z/NasAcademyParkingProblem.zip"
         },
-        "FunctionName": "JioTesseractParkingLotProblem-production-api",
+        "FunctionName": "NasAcademyParkingProblem-production-api",
         "Handler": "lambda.handler",
         "MemorySize": 512,
         "Role": {
@@ -122,20 +122,20 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ApiLambdaVersionJ1sRPts6FSiJd8Lz1kWcPU2nzaj1el6FgPsiVghhxA": {
+    "ApiLambdaVersionUI1Qi8Fv1rjxVrb0iIXyWvGXExIwYPtMouqEhktksMc": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "24Vq1YlW4RCbHaTTadLZPo6cU5UyYCyC69NMIQAOIiQ="
+        "CodeSha256": "dH5tMDyNef0HeZphWDCyVOetti2Kden7cFCU1I9j64I="
       }
     },
     "ApiGatewayRestApi": {
       "Type": "AWS::ApiGateway::RestApi",
       "Properties": {
-        "Name": "production-JioTesseractParkingLotProblem",
+        "Name": "production-NasAcademyParkingProblem",
         "EndpointConfiguration": {
           "Types": [
             "EDGE"
@@ -247,7 +247,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1604234663831": {
+    "ApiGatewayDeployment1615054380782": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -317,7 +317,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersionJ1sRPts6FSiJd8Lz1kWcPU2nzaj1el6FgPsiVghhxA"
+        "Ref": "ApiLambdaVersionUI1Qi8Fv1rjxVrb0iIXyWvGXExIwYPtMouqEhktksMc"
       }
     },
     "ServiceEndpoint": {

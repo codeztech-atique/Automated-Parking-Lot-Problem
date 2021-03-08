@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 const chalk = require('chalk');
 require('../models/parkinglot');
-const Jio_Parkinglot = mongoose.model('Jio_Parkinglot');
+const parkingslot = mongoose.model('parkinglot');
 
 // Parking Lot Create | Update
 
 exports.parkingLotPrblm = (req, res, next) => {
   console.log(chalk.bgYellowBright("---------------- Parking Lot Information Submitted ----------------"));
   console.log(req.body);
-  Jio_Parkinglot.findOne({'uniqueId': req.body.uniqueId}, async( err, parkinglot) => {
+  parkingslot.findOne({'uniqueId': req.body.uniqueId}, async( err, parkinglot) => {
       if (parkinglot!==null) {
         var errMsg = ''; //Queue Full
         // Calulation For Car Enter's in Reserve Parking here
@@ -58,7 +58,7 @@ exports.parkingLotPrblm = (req, res, next) => {
           
           console.log(parkinglot);
           
-          var parkingLotInformation = new Jio_Parkinglot(parkinglot);
+          var parkingLotInformation = new parkingslot(parkinglot);
 
           parkingLotInformation.save().then(parkingLot => {
             res.send({
@@ -77,7 +77,7 @@ exports.parkingLotPrblm = (req, res, next) => {
       } else if(!err && parkinglot===null) { //Its a new record
         console.log(chalk.red("ParkingLot Information - No Record Found with the respective id!!"));
         res.status(400).send({
-            message: 'Unique Id does not match with the database, please use the jio_tesseract_prkinglot unique id !!',
+            message: 'Unique Id does not match with the database, please use the nas_parkinglot unique id !!',
             status: 400
         });
       } else {
@@ -93,7 +93,7 @@ exports.parkingLotPrblm = (req, res, next) => {
 exports.updateTotalParkingSlot = (req, res, next) => {
   console.log(chalk.bgYellowBright("---------------- Update Total Parking Lot Information ----------------"));
   console.log(req.body);
-  Jio_Parkinglot.findOne({'uniqueId': req.body.uniqueId}, async( err, parkinglot) => {
+  parkingslot.findOne({'uniqueId': req.body.uniqueId}, async( err, parkinglot) => {
       if (parkinglot!==null) {
         parkinglot.reservedParkingCapacity = (req.body.totalParkingSlot/100)*20; // 20% for reserved parking
         parkinglot.notReservedParkingCapacity = (req.body.totalParkingSlot/100)*80; // 80% for not-reserved parking
@@ -102,11 +102,11 @@ exports.updateTotalParkingSlot = (req, res, next) => {
 
         parkinglot.totalParkingSlot = req.body.totalParkingSlot;
         console.log(parkinglot);
-        var parkingLotInformation = new Jio_Parkinglot(parkinglot);
+        var parkingLotInformation = new parkingslot(parkinglot);
         parkingLotInformation.save().then(parkingLot => {
           res.send({
             message: 'Parking lot Information Updated !!',
-            status: 200,
+            status: 201,
             data: parkingLot
           })
         }).catch(err => {
@@ -119,7 +119,7 @@ exports.updateTotalParkingSlot = (req, res, next) => {
       } else {
         res.status(404).send({
           status: 404,
-          message: 'Update failed! Unique Id does not match with the database, please use the jio_tesseract_prkinglot unique id !!'
+          message: 'Update failed! Unique Id does not match with the database, please use the nas_parkinglot unique id !!'
         })
       }
   })
@@ -128,7 +128,7 @@ exports.updateTotalParkingSlot = (req, res, next) => {
 exports.getAllInformation = (req, res, next) => {
   console.log(chalk.bgYellowBright("---------------- Get All Total Parking Lot Information ----------------"));
   console.log();
-  Jio_Parkinglot.findOne({'uniqueId': req.body.uniqueId}, async( err, parkinglot) => {
+  parkingslot.findOne({'uniqueId': req.body.uniqueId}, async( err, parkinglot) => {
     if (parkinglot!==null) {
       res.send({
         status: 200,
@@ -138,7 +138,7 @@ exports.getAllInformation = (req, res, next) => {
     } else {
       res.send({
         status: 200,
-        message: 'No Parkinglot information Found with the repective id, please use jio_tesseract_prkinglot !!'
+        message: 'No Parkinglot information Found with the repective id, please use nas_parkinglot !!'
       });
     }
   }) 

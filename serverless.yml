@@ -1,4 +1,4 @@
-service: JioTesseractParkingLotProblem #Name of your App
+service: NasAcademyParkingProblem #Name of your App
 
 provider:
  name: aws
