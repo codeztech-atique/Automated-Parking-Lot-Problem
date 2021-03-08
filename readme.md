@@ -26,7 +26,7 @@ required application should be mentioned) <br />
 
 **Steps to Run the Application** <br />
 npm install --save <br />
-node local.js || node local
+node local.js || node local || npm start
 
 **TechStack I used** <br />
 NodeJS <br />
@@ -34,5 +34,17 @@ MongoDB Cloud <br />
 AWS Lambda <br />
 AWS API Getway <br />
 
+**FrontEnd Code**
+https://github.com/codeztech-atique/parkinglotproblem
+
+**BackEnd Code**
+https://github.com/codeztech-atique/Automated-Parking-Lot-Problem
+
 **API URL** <br />
 https://3sgspkd105.execute-api.ap-south-1.amazonaws.com/production
+
+**API Documentation**
+https://documenter.getpostman.com/view/2063706/Tz5m8Kma
+
+**Youtube Video**
+https://youtu.be/Zt8a2zt2I1c

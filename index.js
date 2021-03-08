@@ -23,6 +23,7 @@ app.use('', apiRoutes);
 app.use(function (req,res,next){
 	res.status(404).send('Error - Unable to find the requested resource!');
 });
+// http://localhost:4000/asdfasdfasdf
 
 app.use((req, res, next) => {
   req.socket.on('error', () => {});
